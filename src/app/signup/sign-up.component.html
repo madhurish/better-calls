@@ -1,20 +1,20 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
   <label>
     Email:
-    <input formControlName="email" type="email">
+    <input formControlName="email" placeholder="Email" type="email">
   </label>
 
   <label>
     Password:
-    <input formControlName="password" type="password">
+    <input formControlName="password" placeholder="Password" type="password">
   </label>
 
   <label>
     Confirm password:
-    <input formControlName="confirmPassword" type="password">
+    <input formControlName="confirmPassword" placeholder="Confirm Password" type="password">
   </label>
 
 
+  <button [disabled]="!signUpForm.valid" type="submit">Sign Up</button>
   <button (click)="onCancel()">Cancel</button>
-  <button type="submit">Sign Up</button>
 </form>

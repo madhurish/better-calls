@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AuthService} from '../auth-service/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,19 +11,27 @@ import {Router} from '@angular/router';
 export class SignUpComponent implements OnInit {
 
   signUpForm = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl(),
-    confirmPassword: new FormControl()
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private authService: AuthService) {
   }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log('onSubmit');
+    const formObj = this.signUpForm.value;
+    this.authService.signUp(formObj.email, formObj.password).then(value => {
+      console.log(value);
+      this.signUpForm.reset();
+      this.router.navigate(['dashboard']);
+    }).catch(reason => {
+      console.log(reason);
+    });
   }
 
   onCancel() {
