@@ -9,6 +9,10 @@ import {SignUpComponent} from './signup/sign-up.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,6 +35,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
