@@ -3,17 +3,17 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-signup',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class LoginComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
-  loginForm = new FormGroup({
+  signUpForm = new FormGroup({
     email: new FormControl(),
     password: new FormControl(),
-    }
-  );
+    confirmPassword: new FormControl()
+  });
 
   constructor(private router: Router) {
   }
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('onLogin');
+    console.log('onSubmit');
   }
 
   onCancel() {

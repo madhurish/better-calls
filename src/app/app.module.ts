@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
-import {SignupComponent} from './signup/signup.component';
+import {SignUpComponent} from './signup/sign-up.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -13,7 +13,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
+  {path: 'signup', component: SignUpComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];
@@ -23,7 +23,7 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent,
+    SignUpComponent,
     PageNotFoundComponent,
     DashboardComponent
   ],
