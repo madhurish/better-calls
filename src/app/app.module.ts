@@ -14,16 +14,16 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AuthGuard} from './auth-guard/auth.guard';
-import {ConnectedClientComponent} from './connected-client/connected-client.component';
 import {ClientDetailComponent} from './client-detail/client-detail.component';
 import {StatisticsComponent} from './statistics/statistics.component';
-import {ConnectedClientsComponent} from './connected-clients/connected-clients.component';
+import {ConnectedSystemComponent} from './connected-system/connected-system.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignUpComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'consys', component: ConnectedSystemComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];
@@ -36,10 +36,9 @@ const appRoutes: Routes = [
     SignUpComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    ConnectedClientComponent,
     ClientDetailComponent,
     StatisticsComponent,
-    ConnectedClientsComponent
+    ConnectedSystemComponent
   ],
   imports: [
     BrowserModule,
