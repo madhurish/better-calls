@@ -6,10 +6,10 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyDjbL8EBI9EMoD0u9pLPg6x0wKnQIcRQsM',
-    authDomain: 'angular-firebase-auth-5569c.firebaseapp.com',
-    databaseURL: 'https://angular-firebase-auth-5569c.firebaseio.com',
-    projectId: 'angular-firebase-auth-5569c',
-    storageBucket: 'angular-firebase-auth-5569c.appspot.com',
+    authDomain: 'angular-firebase-auth-guard-5569c.firebaseapp.com',
+    databaseURL: 'https://angular-firebase-auth-guard-5569c.firebaseio.com',
+    projectId: 'angular-firebase-auth-guard-5569c',
+    storageBucket: 'angular-firebase-auth-guard-5569c.appspot.com',
     messagingSenderId: '627625800845'
   },
 };
