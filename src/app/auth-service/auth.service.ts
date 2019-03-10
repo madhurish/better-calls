@@ -1,10 +1,40 @@
 import {Injectable} from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {User} from 'firebase';
+import UserCredential = firebase.auth.UserCredential;
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  user: User;
+  private readonly userKey = 'user';
 
-  constructor() {
+  constructor(private afAuth: AngularFireAuth) {
+    this.afAuth.authState.subscribe(user => {
+      if (user) {
+        this.user = user;
+        localStorage.setItem(this.userKey, JSON.stringify(this.user));
+      } else {
+        localStorage.setItem(this.userKey, null);
+      }
+    });
+  }
+
+  async login(email: string, password: string): Promise<UserCredential> {
+    return this.afAuth.auth.signInWithEmailAndPassword(email, password);
+  }
+
+  async logout() {
+    await this.afAuth.auth.signOut();
+    localStorage.removeItem(this.userKey);
+  }
+
+  async signUp(email: string, password: string) {
+    return this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  isLoggedIn(): boolean {
+    return JSON.parse(localStorage.getItem(this.userKey)) !== null;
   }
 }

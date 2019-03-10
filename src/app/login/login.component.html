@@ -9,6 +9,6 @@
     <input formControlName="password" type="password">
   </label>
 
+  <button [disabled]="!loginForm.valid" type="submit">Login</button>
   <button (click)="onCancel()">Cancel</button>
-  <button type="submit">Login</button>
 </form>
