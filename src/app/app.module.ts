@@ -14,6 +14,9 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AuthGuard} from './auth-guard/auth.guard';
+import {ConnectedClientComponent} from './connected-client/connected-client.component';
+import {ClientDetailComponent} from './client-detail/client-detail.component';
+import {StatisticsComponent} from './statistics/statistics.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,7 +34,10 @@ const appRoutes: Routes = [
     LoginComponent,
     SignUpComponent,
     PageNotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConnectedClientComponent,
+    ClientDetailComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
