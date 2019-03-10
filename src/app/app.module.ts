@@ -17,6 +17,7 @@ import {AuthGuard} from './auth-guard/auth.guard';
 import {ConnectedClientComponent} from './connected-client/connected-client.component';
 import {ClientDetailComponent} from './client-detail/client-detail.component';
 import {StatisticsComponent} from './statistics/statistics.component';
+import {ConnectedClientsComponent} from './connected-clients/connected-clients.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ConnectedClientComponent,
     ClientDetailComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    ConnectedClientsComponent
   ],
   imports: [
     BrowserModule,
