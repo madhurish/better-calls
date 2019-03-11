@@ -1,3 +1,34 @@
 <p>
   statistics works!
 </p>
+<ngx-charts-area-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="multi"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [showGridLines]="showGridLines"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [autoScale]="autoScale"
+  (select)="onSelect($event)">
+</ngx-charts-area-chart>
+
+<hr>
+
+<ngx-charts-pie-chart
+  (select)="onSelect($event)"
+  [doughnut]="doughnut"
+  [explodeSlices]="explodeSlices"
+  [gradient]="gradient"
+  [labels]="showLabels"
+  [legend]="showLegend"
+  [results]="single"
+  [scheme]="colorScheme"
+  [view]="view">>
+
+</ngx-charts-pie-chart>
