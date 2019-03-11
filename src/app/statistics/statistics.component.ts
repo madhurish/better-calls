@@ -5,7 +5,7 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {Observable} from 'rxjs';
 
 export interface Ram {
-  date: string;
+  name: string;
   value: number;
 }
 
@@ -34,6 +34,7 @@ export class StatisticsComponent implements OnInit {
   timeline = true;
 
   data;
+
   hdData;
 
   curve = shape.curveCardinal;
@@ -59,22 +60,23 @@ export class StatisticsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data = this.service.getRamUsageData();
     this.hdData = this.service.getHardDiskUsageData();
     this.ram$.subscribe((value) => {
-      this.data[0].series.push(...value);
-      this.data[0].series = [...this.data[0].series];
-      console.log(this.data);
+      this.data = [{name: 'Ram', series: value}];
+      this.data = [...this.data];
     });
+    /*
     setInterval(() => {
       ++this.counter;
-      if (this.counter < 10) {
-        // this.addToDb();
+      //this.data[0].series.push({name: new Date().toISOString(), value: Math.floor(Math.random() * 99)});
+      //this.data = [...this.data];
+      if (this.counter < 11) {
+        this.addToDb();
       }
-    }, 3000);
+    }, 3000);*/
   }
 
   addToDb() {
-    this.ramCollectionRef.add({date: new Date().toISOString(), value: Math.floor(Math.random() * 100)});
+    this.ramCollectionRef.add({name: new Date().toISOString(), value: Math.floor(Math.random() * 100)});
   }
 }
