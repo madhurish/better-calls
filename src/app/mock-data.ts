@@ -17,6 +17,18 @@ export class MockData {
     new System('Brian\'s MacBook Mini', '192.168.0.16'),
     new System('Maurice\'s MacBook Pro', '192.168.0.17'),
   ];
+
+  static resourceUsage = [
+    {
+      name: 'Ram',
+      series: [
+        {
+          name: new Date(),
+          value: 50
+        }
+      ]
+    },
+  ];
 }
 
 

@@ -17,6 +17,8 @@ import {AuthGuard} from './auth-guard/auth.guard';
 import {ClientDetailComponent} from './client-detail/client-detail.component';
 import {StatisticsComponent} from './statistics/statistics.component';
 import {ConnectedSystemComponent} from './connected-system/connected-system.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
   {path: 'signup', component: SignUpComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'consys', component: ConnectedSystemComponent},
+  {path: 'stats', component: StatisticsComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];
@@ -42,12 +45,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     RouterModule.forRoot(appRoutes),
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,22 +1,21 @@
-<p>
-  statistics works!
-</p>
-<ngx-charts-area-chart
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="multi"
+<ngx-charts-line-chart
+  (select)="onSelect($event)"
+  [autoScale]="autoScale"
+  [curve]="curve"
   [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [showGridLines]="showGridLines"
   [legend]="showLegend"
+  [results]="data"
+  [scheme]="colorScheme"
+  [showGridLines]="showGridLines"
   [showXAxisLabel]="showXAxisLabel"
   [showYAxisLabel]="showYAxisLabel"
+  [timeline]="timeline"
+  [view]="view"
   [xAxisLabel]="xAxisLabel"
+  [xAxis]="showXAxis"
   [yAxisLabel]="yAxisLabel"
-  [autoScale]="autoScale"
-  (select)="onSelect($event)">
-</ngx-charts-area-chart>
+  [yAxis]="showYAxis">
+</ngx-charts-line-chart>
 
 <hr>
 
@@ -27,7 +26,7 @@
   [gradient]="gradient"
   [labels]="showLabels"
   [legend]="showLegend"
-  [results]="single"
+  [results]="hdData"
   [scheme]="colorScheme"
   [view]="view">>
 
