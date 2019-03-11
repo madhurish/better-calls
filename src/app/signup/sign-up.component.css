@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2F5F9;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+#login .container #login-row #login-column #login-box {
+    margin-top: 3em;
+    max-width: 500em;
+    height: 25em;
+    background-color: #FFFFFF;
+    
+  }
+
+  .login-heading{
+      margin-bottom:20px;
+      font-weight: lighter;
+  }
+  .logo{
+      margin:30px 0px;
+  }
+
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+    padding-bottom: 50px;
+    
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+   
+  }
+ 
+  .btn{
+border-radius:5%;
+  }
+  .buttons{
+      display:flex;
+    
+     
+  }
+  .submit{
+        background-color: 2B7FB6;
+        flex:3;
+        margin:20px 0px 50px 10px;
+   }
+   .cancel{
+         border:1px solid black;
+         flex:2;
+         margin:20px 10px 50px 0px;
+   }
+   #login-box{
+       padding-bottom: 550px;
+       border-radius:2%;
+       box-shadow: 1px 1px 1px 1px #eeeeee;
+   }
