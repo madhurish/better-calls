@@ -1,0 +1,52 @@
+body
+{
+  background-size: cover;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Roboto thin', sans-serif;
+  font-style: bold;
+}
+.button {
+    border: none;
+    color: white;
+    padding: 8px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+     font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button-login
+  {
+    background-color: #008CBA;
+  }
+  .button-signup {
+    margin-right: 1em;
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+  }
+.container
+{   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+.heading
+{
+  margin-right:auto;
+  margin-left:auto;
+}
+.content
+{
+  margin-top: 30vh;
+}
+p
+{
+  color: grey;
+  word-wrap: break-word;
+}
