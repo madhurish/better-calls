@@ -1,16 +1,22 @@
 body
 {
-  background-image: url('../../assets/bg.jpg') ;
+  background-size: cover;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Roboto thin', sans-serif;
+  font-style: bold;
 }
 .button {
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 8px 38px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 16px; */
-    margin: 4px 1px;
+     font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
   }
   .button-login
@@ -21,7 +27,7 @@ body
     margin-right: 1em;
     background-color: white;
     color: black;
-    border: 2px solid #555555;
+    border: 1px solid #555555;
   }
 .container
 {   
@@ -38,4 +44,9 @@ body
 .content
 {
   margin-top: 30vh;
+}
+p
+{
+  color: grey;
+  word-wrap: break-word;
 }
