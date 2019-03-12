@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {User} from 'firebase';
+import {Router} from '@angular/router';
 import UserCredential = firebase.auth.UserCredential;
 
 @Injectable({
@@ -10,7 +11,8 @@ export class AuthService {
   user: User;
   private readonly userKey = 'user';
 
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth,
+              private router: Router) {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.user = user;
@@ -28,6 +30,7 @@ export class AuthService {
   async logout() {
     await this.afAuth.auth.signOut();
     localStorage.removeItem(this.userKey);
+    this.router.navigate(['home']);
   }
 
   async signUp(email: string, password: string) {
