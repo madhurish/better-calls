@@ -25,5 +25,4 @@ export class ConnectedSystemComponent implements OnInit {
       this.connectedSystems = value;
     });
   }
-
 }

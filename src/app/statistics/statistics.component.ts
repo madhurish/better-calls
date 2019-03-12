@@ -70,7 +70,7 @@ export class StatisticsComponent implements OnInit {
       //this.data[0].series.push({name: new Date().toISOString(), value: Math.floor(Math.random() * 99)});
       //this.data = [...this.data];
       if (this.counter < 11) {
-        this.addToDb();
+        //this.addToDb();
       }
     }, 3000);
   }

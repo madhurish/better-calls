@@ -13,23 +13,24 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AuthGuard} from './auth-guard/auth.guard';
 import {ClientDetailComponent} from './client-detail/client-detail.component';
 import {StatisticsComponent} from './statistics/statistics.component';
 import {ConnectedSystemComponent} from './connected-system/connected-system.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignUpComponent},
-  {path: 'dashboard', component: DashboardComponent
-  //canActivate: [AuthGuard]
-},
+  {
+    path: 'dashboard', component: DashboardComponent
+    //canActivate: [AuthGuard]
+  },
   {path: 'consys', component: ConnectedSystemComponent},
   {path: 'stats', component: StatisticsComponent},
+  {path: 'nav', component: NavbarComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 ];
