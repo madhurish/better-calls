@@ -1,20 +1,20 @@
-<ngx-charts-line-chart
-  (select)="onSelect($event)"
-  [autoScale]="autoScale"
-  [curve]="curve"
-  [gradient]="gradient"
-  [legend]="showLegend"
-  [results]="data"
-  [scheme]="colorScheme"
-  [showGridLines]="showGridLines"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [timeline]="timeline"
-  [view]="view"
-  [xAxisLabel]="xAxisLabel"
-  [xAxis]="showXAxis"
-  [yAxisLabel]="yAxisLabel"
-  [yAxis]="showYAxis">
+<ngx-charts-line-chart *ngIf="data"
+                       (select)="onSelect($event)"
+                       [autoScale]="autoScale"
+                       [curve]="curve"
+                       [gradient]="gradient"
+                       [legend]="showLegend"
+                       [results]="data"
+                       [scheme]="colorScheme"
+                       [showGridLines]="showGridLines"
+                       [showXAxisLabel]="showXAxisLabel"
+                       [showYAxisLabel]="showYAxisLabel"
+                       [timeline]="timeline"
+                       [view]="view"
+                       [xAxisLabel]="xAxisLabel"
+                       [xAxis]="showXAxis"
+                       [yAxisLabel]="yAxisLabel"
+                       [yAxis]="showYAxis">
 </ngx-charts-line-chart>
 
 <hr>
@@ -28,6 +28,6 @@
   [legend]="showLegend"
   [results]="hdData"
   [scheme]="colorScheme"
-  [view]="view">>
+  [view]="view">
 
 </ngx-charts-pie-chart>

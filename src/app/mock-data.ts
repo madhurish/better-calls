@@ -23,7 +23,7 @@ export class MockData {
       name: 'Ram',
       series: [
         {
-          name: new Date(),
+          name: new Date().toISOString(),
           value: 50
         }
       ]
