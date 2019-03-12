@@ -65,7 +65,6 @@ export class StatisticsComponent implements OnInit {
       this.data = [{name: 'Ram', series: value}];
       this.data = [...this.data];
     });
-    /*
     setInterval(() => {
       ++this.counter;
       //this.data[0].series.push({name: new Date().toISOString(), value: Math.floor(Math.random() * 99)});
@@ -73,7 +72,7 @@ export class StatisticsComponent implements OnInit {
       if (this.counter < 11) {
         this.addToDb();
       }
-    }, 3000);*/
+    }, 3000);
   }
 
   addToDb() {

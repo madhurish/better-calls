@@ -1,4 +1,4 @@
-<ul>
+<ul *ngIf="connectedSystems">
   <li *ngFor="let system of connectedSystems">
     <img src="../../favicon.ico">
     <h4> {{ system.hostName }}</h4>

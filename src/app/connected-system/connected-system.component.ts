@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {InfoService} from '../info-service/info.service';
-import {System} from '../mock-data';
+import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
+import {System} from '../models/System';
 
 @Component({
   selector: 'app-connected-clients',
@@ -9,13 +10,20 @@ import {System} from '../mock-data';
 })
 export class ConnectedSystemComponent implements OnInit {
 
-  connectedSystems: System[];
+  connectedSystems;
 
-  constructor(private service: InfoService) {
+  connectedSystemsRef: AngularFirestoreCollection<System>;
+  connectedSystems$: Observable<System[]>;
+
+  constructor(private afs: AngularFirestore) {
+    this.connectedSystemsRef = this.afs.collection<System>('device_details');
+    this.connectedSystems$ = this.connectedSystemsRef.valueChanges();
   }
 
   ngOnInit() {
-    this.connectedSystems = this.service.getConnectedClients();
+    this.connectedSystems$.subscribe((value) => {
+      this.connectedSystems = value;
+    });
   }
 
 }
