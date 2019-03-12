@@ -3,6 +3,7 @@ import * as shape from 'd3-shape';
 import {InfoService} from '../info-service/info.service';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 export interface Ram {
   name: string;
@@ -54,7 +55,8 @@ export class StatisticsComponent implements OnInit {
   counter = 0;
 
   constructor(private service: InfoService,
-              private afs: AngularFirestore) {
+              private afs: AngularFirestore,
+              private router: Router) {
     this.ramCollectionRef = this.afs.collection<Ram>('data');
     this.ram$ = this.ramCollectionRef.valueChanges();
   }
@@ -77,5 +79,9 @@ export class StatisticsComponent implements OnInit {
 
   addToDb() {
     this.ramCollectionRef.add({name: new Date().toISOString(), value: Math.floor(Math.random() * 100)});
+  }
+
+  gotoDashboard() {
+    this.router.navigate(['dashboard']);
   }
 }

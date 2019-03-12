@@ -19,6 +19,49 @@
 
 <hr>
 
+<ngx-charts-line-chart *ngIf="data"
+                       (select)="onSelect($event)"
+                       [autoScale]="autoScale"
+                       [curve]="curve"
+                       [gradient]="gradient"
+                       [legend]="showLegend"
+                       [results]="data"
+                       [scheme]="colorScheme"
+                       [showGridLines]="showGridLines"
+                       [showXAxisLabel]="showXAxisLabel"
+                       [showYAxisLabel]="showYAxisLabel"
+                       [timeline]="timeline"
+                       [view]="view"
+                       [xAxisLabel]="xAxisLabel"
+                       [xAxis]="showXAxis"
+                       [yAxisLabel]="yAxisLabel"
+                       [yAxis]="showYAxis">
+</ngx-charts-line-chart>
+
+<hr>
+
+<ngx-charts-line-chart *ngIf="data"
+                       (select)="onSelect($event)"
+                       [autoScale]="autoScale"
+                       [curve]="curve"
+                       [gradient]="gradient"
+                       [legend]="showLegend"
+                       [results]="data"
+                       [scheme]="colorScheme"
+                       [showGridLines]="showGridLines"
+                       [showXAxisLabel]="showXAxisLabel"
+                       [showYAxisLabel]="showYAxisLabel"
+                       [timeline]="timeline"
+                       [view]="view"
+                       [xAxisLabel]="xAxisLabel"
+                       [xAxis]="showXAxis"
+                       [yAxisLabel]="yAxisLabel"
+                       [yAxis]="showYAxis">
+</ngx-charts-line-chart>
+
+<hr>
+<hr>
+
 <ngx-charts-pie-chart
   (select)="onSelect($event)"
   [doughnut]="doughnut"
