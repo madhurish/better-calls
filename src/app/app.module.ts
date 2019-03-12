@@ -19,12 +19,15 @@ import {StatisticsComponent} from './statistics/statistics.component';
 import {ConnectedSystemComponent} from './connected-system/connected-system.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignUpComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'dashboard', component: DashboardComponent
+  //canActivate: [AuthGuard]
+},
   {path: 'consys', component: ConnectedSystemComponent},
   {path: 'stats', component: StatisticsComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -41,7 +44,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ClientDetailComponent,
     StatisticsComponent,
-    ConnectedSystemComponent
+    ConnectedSystemComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
