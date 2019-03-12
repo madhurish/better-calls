@@ -4,6 +4,7 @@ import {InfoService} from '../info-service/info.service';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
+import { database } from 'firebase';
 
 export interface Ram {
   name: string;
@@ -20,37 +21,54 @@ export class StatisticsComponent implements OnInit {
   ramCollectionRef: AngularFirestoreCollection<Ram>;
   ram$: Observable<Ram[]>;
 
-  view: any[] = [700, 400];
+  viewbig: any[] = [1200, 200];
+  viewsmall: any[] = [378, 250];
+  viewpie: any[] = [400, 250];
 
 // options for the chart
-  showXAxis = true;
+  showXAxis = false;
   showYAxis = true;
   showGridLines = false;
   gradient = false;
   showLegend = true;
+  legendPos ='below';
   showXAxisLabel = true;
   xAxisLabel = 'Number';
   showYAxisLabel = true;
   yAxisLabel = 'Value';
   timeline = true;
-
+  
+  
   data;
 
   hdData;
 
   curve = shape.curveCardinal;
 
-  colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  colorScheme1 = {
+    domain: ['#E33C4F', '#A10A28', '#C7B42C', '#AAAAAA']
+
+  };
+  colorScheme2 = {
+    domain: ['#069ADC', '#A10A28', '#C7B42C', '#AAAAAA']
+    
+  };
+  colorScheme3 = {
+    domain: ['#069ADC', '#CCCCCC', '#C7B42C', '#AAAAAA']
+    
+  };
+  colorScheme4 = {
+    domain: ['#437921', '#A10A28', '#C7B42C', '#AAAAAA']
+    
   };
 
 // line, area
-  autoScale = true;
+  autoScale = false;
 
 // pie
   showLabels = true;
   explodeSlices = false;
-  doughnut = false;
+  doughnut = true;
 
   counter = 0;
 
