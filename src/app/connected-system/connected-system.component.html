@@ -1,17 +1,18 @@
-<div class= "container">
-<div class="list-header">
-<h5><b>Devices</b></h5>
-<hr>
-</div>
-<ul *ngIf="connectedSystems">
-  <li *ngFor="let system of connectedSystems">
-    <div class= "list-details">
-    <img src="../../assets/device.svg">
-    <div>
-    <h6> {{ system.username }}</h6>
-    <p> IP: {{ system.ip }}</p>
-    </div>
-    </div>
-  </li>
-</ul>
+<div class="container">
+  <div class="list-header">
+    <h5><b>Devices</b></h5>
+    <hr>
+  </div>
+  <ul *ngIf="connectedSystems">
+    <li *ngFor="let system of connectedSystems"
+        [routerLink]="['/stats', system.serial]">
+      <div class="list-details">
+        <img src="../../assets/device.svg">
+        <div>
+          <h6> {{ system.username }}</h6>
+          <p> IP: {{ system.ip }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

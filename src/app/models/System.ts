@@ -2,7 +2,7 @@ export class System {
   cpu: string;
   numberOfCore: number;
   os: string;
-  serial: number;
+  serial: string;
   totalStorage: number;
   usedStorage: number;
   username: string;
@@ -11,7 +11,7 @@ export class System {
   onBusinessCall: boolean;
 
 
-  constructor(cpu: string, numberOfCore: number, os: string, serial: number,
+  constructor(cpu: string, numberOfCore: number, os: string, serial: string,
               totalStorage: number, usedStorage: number, username: string,
               uuid: string, ip: string, onBusinessCall: boolean) {
     this.cpu = cpu;

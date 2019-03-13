@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     //canActivate: [AuthGuard]
   },
   {path: 'consys', component: ConnectedSystemComponent},
-  {path: 'stats', component: StatisticsComponent},
+  {path: 'stats/:id', component: StatisticsComponent},
   {path: 'nav', component: NavbarComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},

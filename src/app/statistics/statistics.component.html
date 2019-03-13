@@ -1,95 +1,88 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<body><app-navbar></app-navbar>
-<h6 class="clientName">John's MacBook Pro</h6>
+<body>
+<app-navbar></app-navbar>
+<h6 class="clientName"> {{ username }}</h6>
 <div class="container-fluid">
   <div class="full-graph box ">
-      <h5>Network data</h5>
-      <ngx-charts-line-chart *ngIf="data"
-      (select)="onSelect($event)"
-      [autoScale]="autoScale"
-      [curve]="curve"
-      [gradient]="gradient"
-      [results]="data"
-      [scheme]="colorScheme1"
-      [showGridLines]="showGridLines"
-      [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel"
-      [timeline]="timeline"
-      [view]="viewbig"
-      [xAxisLabel]="xAxisLabel"
-      [xAxis]="showXAxis"
-      [maxXAxisTickLength]="maxXAxisTickLength"
-      [yAxis]="showYAxis">
+    <h5>Network Usage</h5>
+    <ngx-charts-line-chart *ngIf="data"
+                           (select)="onSelect($event)"
+                           [autoScale]="autoScale"
+                           [curve]="curve"
+                           [gradient]="gradient"
+                           [results]="data"
+                           [scheme]="colorScheme1"
+                           [showGridLines]="showGridLines"
+                           [showXAxisLabel]="showXAxisLabel"
+                           [showYAxisLabel]="showYAxisLabel"
+                           [timeline]="timeline"
+                           [view]="viewBig"
+                           [xAxisLabel]="xAxisLabel"
+                           [xAxis]="showXAxis"
+                           [maxXAxisTickLength]="maxXAxisTickLength"
+                           [yAxis]="showYAxis">
 
-</ngx-charts-line-chart>
-
-</div>
-<div class="row">
-  <div class="first box">
-      <h5>CPU details</h5>
-      <ngx-charts-area-chart *ngIf="data"
-      (select)="onSelect($event)"
-      [autoScale]="autoScale"
-      [curve]="curve"
-      [gradient]="gradient"
-     
-      [results]="data"
-      [scheme]="colorScheme2"
-      [showGridLines]="showGridLines"
-      [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel"
-      [timeline]="timeline"
-      [view]="viewsmall"
-      [xAxisLabel]="xAxisLabel"
-      [xAxis]="showXAxis"
-      
-      [yAxis]="showYAxis">
-</ngx-charts-area-chart>
+    </ngx-charts-line-chart>
 
   </div>
-<div class="pie box">
-    <h5>Hard Disk Usage</h5>
-    <ngx-charts-pie-chart
-    (select)="onSelect($event)"
-    [doughnut]="doughnut"
-    [explodeSlices]="explodeSlices"
-    [gradient]="gradient"
-    [labels]="showLabels"
-    [legend]="showLegend"
-    [legendPosition]="legendPos"
-    [results]="hdData"
-    [scheme]="colorScheme3"
-    [view]="viewpie"
-    >
-  
-  </ngx-charts-pie-chart>
-  
+  <div class="row">
+    <div class="first box">
+      <h5>CPU Usage</h5>
+      <ngx-charts-area-chart *ngIf="cpuUsageData"
+                             (select)="onSelect($event)"
+                             [autoScale]="autoScale"
+                             [curve]="curve"
+                             [gradient]="gradient"
+                             [results]="cpuUsageData"
+                             [scheme]="colorScheme2"
+                             [showGridLines]="showGridLines"
+                             [showXAxisLabel]="showXAxisLabel"
+                             [showYAxisLabel]="showYAxisLabel"
+                             [timeline]="timeline"
+                             [view]="viewSmall"
+                             [xAxisLabel]="xAxisLabel"
+                             [xAxis]="showXAxis"
+                             [yAxis]="showYAxis">
+      </ngx-charts-area-chart>
+
+    </div>
+    <div class="pie box">
+      <h5>Hard Disk Usage</h5>
+      <ngx-charts-pie-chart
+        (select)="onSelect($event)"
+        [doughnut]="doughnut"
+        [explodeSlices]="explodeSlices"
+        [gradient]="gradient"
+        [labels]="showLabels"
+        [legend]="showLegend"
+        [legendPosition]="legendPos"
+        [results]="hdData"
+        [scheme]="colorScheme3"
+        [view]="viewPie">
+      </ngx-charts-pie-chart>
 
 
+    </div>
+    <div class="one-third box">
+      <h5>Ram Usage</h5>
+      <ngx-charts-area-chart *ngIf="ramUsageData"
+                             (select)="onSelect($event)"
+                             [autoScale]="autoScale"
+                             [curve]="curve"
+                             [gradient]="gradient"
+                             [results]="ramUsageData"
+                             [scheme]="colorScheme2"
+                             [showGridLines]="showGridLines"
+                             [showXAxisLabel]="showXAxisLabel"
+                             [showYAxisLabel]="showYAxisLabel"
+                             [timeline]="timeline"
+                             [view]="viewSmall"
+                             [xAxisLabel]="xAxisLabel"
+                             [xAxis]="showXAxis"
 
-</div>
-<div class="one-third box">
-    <h5>Details</h5>
-    <ngx-charts-area-chart *ngIf="data"
-    (select)="onSelect($event)"
-    [autoScale]="autoScale"
-    [curve]="curve"
-    [gradient]="gradient"
-    [results]="data"
-    [scheme]="colorScheme2"
-    [showGridLines]="showGridLines"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [timeline]="timeline"
-    [view]="viewsmall"
-    [xAxisLabel]="xAxisLabel"
-    [xAxis]="showXAxis"
-    
-    [yAxis]="showYAxis">
-</ngx-charts-area-chart>
-
-
-</div>
-</div>
+                             [yAxis]="showYAxis">
+      </ngx-charts-area-chart>
+    </div>
+  </div>
 </div>
 </body>
