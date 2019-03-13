@@ -1,0 +1,40 @@
+.container-fluid{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    margin:0;
+   
+}
+body{
+    background-color: #DCE1E7;
+    font-family:Roboto;
+}
+.row-data{
+    display:flex;
+    
+    
+}
+.box{
+    background-color: white;
+    margin-top:1em;
+    margin-left:1em;
+    margin-right:1em;
+    border:0.01em solid black;
+    border-radius: 4px;
+    box-shadow: 0 8px 12px 0 rgba(133,149,171,0.14);
+}
+h5{
+    margin:1em;
+    margin-bottom:2em;
+   
+}
+.first{
+    margin-left:2em;
+}
+.full-graph{
+    margin-top:0em;
+}
+.clientName{
+    margin-left:2em;
+    margin-bottom:1em;
+}
