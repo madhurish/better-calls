@@ -1,5 +1,6 @@
 .body{
     display:flex;
+    
 }
 .cards{
     font-family: Roboto;
@@ -8,7 +9,6 @@
 
     padding-left:1em;
     padding-right:1em;
-    
 }
 app-connected-clients{
     flex:1;
@@ -44,4 +44,45 @@ img{
 }
 h1{
     font-weight: bold;
+}
+.content
+{
+    display:flex;
+    flex-direction: column;
+}
+.table
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table
+{
+    width:100%;
+}
+th
+{
+    font-size: 0.750em;
+}
+button
+{
+    border-radius: 40%;
+    color: #52BEFF;
+    background-color: rgba(19,194,254,0.11);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+td
+{
+    color: #363C43;
+    font-size: 0.750em;
+}
+h5
+{
+    font-size: 0.875em;
+}
+app-connected-clients
+{
+    height: 80vh;
+    background-color: #263446;
 }

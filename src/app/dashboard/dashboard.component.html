@@ -2,7 +2,7 @@
 <div class="body">
 <app-connected-clients></app-connected-clients>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+<div class="content">
 <div class=" cards">
     <div class="  card">
         <img src="../../assets/clients_connected.svg"/>
@@ -20,6 +20,20 @@
             <h1>27</h1>
             <h6>Clients Being Prioritised</h6>
     </div>
+</div>
+<div class="table">
+    <h5><b>PRIORITIZED CLIENTS</b></h5>
+    <table>
+        <th>Device Name </th>
+        <th>Processes' Name </th>
+        <th>OnGoing Duration</th>
+        <tr *ngFor= "let number of [0,1,2,3]">
+            <td>John's Macbook Pro</td>
+            <td><button>Skype</button></td>
+            <td>00.10.12</td>
+        </tr>
+    </table>
+</div>
 </div>
 </div>
 
