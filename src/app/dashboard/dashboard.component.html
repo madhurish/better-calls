@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <div class="body">
 <app-connected-clients></app-connected-clients>
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <div class="content">
 <div class=" cards">
     <div class="  card">
         <img src="../../assets/clients_connected.svg"/>
-        <h1>65</h1>
+        <h1>67</h1>
         <p>Clients Connected</p>
     </div>
     <div class=" card">
@@ -14,7 +14,7 @@
             <h1>60%</h1>
             <h6>Avg Network Usage</h6>
     </div>
-    <div class=" card">
+    <div class=" card last-card">
             <img class="clients" 
             src="../../assets/prioritised_clients.png"/>
             <h1>27</h1>
@@ -23,13 +23,14 @@
 </div>
 <div class="table">
     <h5><b>PRIORITIZED CLIENTS</b></h5>
-    <table>
+    <table><tr class="heading">
         <th>Device Name </th>
         <th>Processes' Name </th>
         <th>OnGoing Duration</th>
-        <tr *ngFor= "let number of [0,1,2,3]">
+        </tr>
+        <tr *ngFor= "let number of [0,1,2,3,4]">
             <td>John's Macbook Pro</td>
-            <td><button>Skype</button></td>
+            <td><span class="buttons">Skype</span></td>
             <td>00.10.12</td>
         </tr>
     </table>

@@ -27,7 +27,7 @@ export class StatisticsComponent implements OnInit {
   showYAxis = true;
   showGridLines = false;
   gradient = false;
-  showLegend = true;
+  showLegend = false;
   legendPos = 'below';
   showXAxisLabel = true;
   xAxisLabel = 'Number';
