@@ -13,7 +13,6 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {ClientDetailComponent} from './client-detail/client-detail.component';
 import {StatisticsComponent} from './statistics/statistics.component';
 import {ConnectedSystemComponent} from './connected-system/connected-system.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
@@ -43,7 +42,6 @@ const appRoutes: Routes = [
     SignUpComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    ClientDetailComponent,
     StatisticsComponent,
     ConnectedSystemComponent,
     NavbarComponent

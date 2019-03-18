@@ -92,14 +92,10 @@ export class StatisticsComponent implements OnInit {
       this.getHardDiskData(id);
       this.getCpuUsage(id);
       this.getRamUsage(id);
-      this.getNetworkUsage(id);
+      // this.getNetworkUsage(id);
       this.makeTheGraphMoveIt();
     });
 
-    this.hdData = this.service.getHardDiskUsageData();
-    this.ram$.subscribe((value) => {
-      this.data = [{name: 'Ram', series: value}];
-    });
   }
 
   getHardDiskData(id: string) {
@@ -115,8 +111,6 @@ export class StatisticsComponent implements OnInit {
               name: 'Total',
               value: system.totalStorage
             }];
-
-          console.log(this.hdData);
         }
       });
     });
@@ -127,6 +121,7 @@ export class StatisticsComponent implements OnInit {
     this.realTimeDate$ = this.realTimeDataRef.valueChanges();
     this.realTimeDate$.subscribe(data => {
       this.cpuUsageData = [{name: 'CPU Usage', series: data}];
+      this.data = [{name: 'Network Usage', series: data}];
     });
   }
 
