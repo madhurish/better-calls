@@ -1,26 +1,30 @@
 .body{
     display:flex;
+    background-color:  #DCE1E7;
+    height:100vh;
     
 }
 .cards{
     font-family: Roboto;
     padding-top: 1em;
     padding-bottom: 1em;
-
+    
     padding-left:1em;
     padding-right:1em;
+    
 }
 app-connected-clients{
     flex:1;
-    margin-top:0em;
-    margin-right: 0em;
+   
 }
 .cards{
     display:flex;
-    flex:4;
+    
     text-align: center;
-    margin:1em;
+    margin:0.5em;
     background-color: #DCE1E7;
+    
+    
 }
 .card{
     padding-top:2em;
@@ -29,7 +33,12 @@ app-connected-clients{
     padding-bottom:1em;
     width:100%;
     height: 12em;	width: 20em;	border-radius: 4px;	background-color: #FFFFFF;	
-    box-shadow: 0 8px 12px 0 rgba(133,149,171,0.09);
+    box-shadow: 0 10px 20px 0 rgba(133,149,171,0.09);
+    margin-right:12px;
+    border-radius:2%;
+}
+.last-card{
+    margin-right:0px;
 }
 .clients{
     margin-left:auto;
@@ -55,22 +64,39 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    padding-top:2em;
+    width:95%;
+    margin:auto;
+    margin-bottom:3.5em;
+    margin-top:0em;
+    border-radius:1%;
+    
+}
+.heading{
+    padding-bottom: 2em;
 }
 table
 {
     width:100%;
+     border-collapse: separate;
+    
+    
+    
 }
 th
 {
     font-size: 0.750em;
 }
-button
+.buttons
 {
-    border-radius: 40%;
+    border-radius: 35%;
     color: #52BEFF;
     background-color: rgba(19,194,254,0.11);
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 td
 {
@@ -83,6 +109,12 @@ h5
 }
 app-connected-clients
 {
-    height: 80vh;
+    height: 100vh;
     background-color: #263446;
+}
+tr{
+    border-radius:5%;
+
+    
+
 }

@@ -41,9 +41,9 @@ export class DashboardComponent implements OnInit {
   calculateAlerts() {
     this.connectedSystems.forEach((value) => {
       // hard disk usage alert
-      if (value.hardDiskRunningLow()) {
-        this.alertsCount++;
-      }
+     // if (value.hardDiskRunningLow()) {
+       // this.alertsCount++;
+     // }
     });
   }
 }
