@@ -1,7 +1,10 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <body>
 <app-navbar></app-navbar>
+<div class="head">
 <h6 class="clientName"> {{ username }}</h6>
+<button (click)="block($event)" class="block">Block</button>
+<button (click)="unblock($event)" class="unblock">Unblock</button></div>
 <div class="container-fluid">
   <div class="full-graph box ">
     <h5>Network Usage</h5>

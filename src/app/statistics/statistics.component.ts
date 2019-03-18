@@ -145,6 +145,13 @@ export class StatisticsComponent implements OnInit {
     this.router.navigate(['dashboard']);
   }
 
+  block(event: Event) {
+    console.log('Block!', event);
+  }
+  unblock(event: Event) {
+    console.log('Unblock!', event);
+  }
+
   makeTheGraphMoveIt() {
     setInterval(() => {
       this.data[0].series.push(this.data[0].series.shift());
