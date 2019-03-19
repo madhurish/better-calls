@@ -26,12 +26,12 @@
     <table><tr class="heading">
         <th>Device Name </th>
         <th>Processes' Name </th>
-        <th>OnGoing Duration</th>
+        <th>Action</th>
         </tr>
         <tr *ngFor= "let systems of prioritisedSystems">
             <td>{{systems.username}}</td>
-            <td><span class="buttons">{{systems.uuid}}</span></td>
-            <td>{{systems.ip}}</td>
+            <td><span class="buttons">{{systems.appRunning}}</span></td>
+            <td>Bandwidth Increased</td>
         </tr>
     </table>
 </div>

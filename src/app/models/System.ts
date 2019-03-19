@@ -8,12 +8,15 @@ export class System {
   username: string;
   uuid: string;
   ip: string;
-  onBusinessCall: boolean;
+  appRunning: string;
+  status: boolean;
+
+
 
 
   constructor(cpu: string, numberOfCore: number, os: string, serial: string,
               totalStorage: number, usedStorage: number, username: string,
-              uuid: string, ip: string, onBusinessCall: boolean) {
+              uuid: string, ip: string, status: boolean, appRunning: string) {
     this.cpu = cpu;
     this.numberOfCore = numberOfCore;
     this.os = os;
@@ -23,7 +26,8 @@ export class System {
     this.username = username;
     this.uuid = uuid;
     this.ip = ip;
-    this.onBusinessCall = onBusinessCall;
+    this.status = status;
+    this.appRunning = appRunning;
   }
 
   hardDiskRunningLow(): boolean {
