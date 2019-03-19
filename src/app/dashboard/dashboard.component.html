@@ -6,7 +6,7 @@
 <div class=" cards">
     <div class="  card">
         <img src="../../assets/clients_connected.svg"/>
-        <h1>67</h1>
+        <h1>{{connectedSystems.length}}</h1>
         <p>Clients Connected</p>
     </div>
     <div class=" card">
@@ -17,7 +17,7 @@
     <div class=" card last-card">
             <img class="clients" 
             src="../../assets/prioritised_clients.png"/>
-            <h1>27</h1>
+            <h1>{{prioritisedSystems.length}}</h1>
             <h6>Clients Being Prioritised</h6>
     </div>
 </div>
@@ -28,10 +28,10 @@
         <th>Processes' Name </th>
         <th>OnGoing Duration</th>
         </tr>
-        <tr *ngFor= "let number of [0,1,2,3,4]">
-            <td>John's Macbook Pro</td>
-            <td><span class="buttons">Skype</span></td>
-            <td>00.10.12</td>
+        <tr *ngFor= "let systems of prioritisedSystems">
+            <td>{{systems.username}}</td>
+            <td><span class="buttons">{{systems.uuid}}</span></td>
+            <td>{{systems.ip}}</td>
         </tr>
     </table>
 </div>

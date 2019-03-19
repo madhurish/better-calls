@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
 
   connectedSystemsRef: AngularFirestoreCollection<System>;
   connectedSystems$: Observable<System[]>;
+  
 
   constructor(private afs: AngularFirestore) {
     this.connectedSystemsRef = this.afs.collection<System>('device_details');
@@ -26,6 +27,7 @@ export class DashboardComponent implements OnInit {
       this.connectedSystems = value;
       this.calculateClientsPrioritised();
       this.calculateAlerts();
+     
     });
   }
 
