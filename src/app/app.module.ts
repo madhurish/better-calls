@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import {SignUpComponent} from './signup/sign-up.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -18,6 +19,8 @@ import {ConnectedSystemComponent} from './connected-system/connected-system.comp
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NavbarComponent} from './navbar/navbar.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -44,8 +47,10 @@ const appRoutes: Routes = [
     DashboardComponent,
     StatisticsComponent,
     ConnectedSystemComponent,
-    NavbarComponent
+    NavbarComponent,
+    DialogComponent
   ],
+  entryComponents: [DialogComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -56,6 +61,7 @@ const appRoutes: Routes = [
     AngularFirestoreModule.enablePersistence(),
     RouterModule.forRoot(appRoutes),
     NgxChartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
